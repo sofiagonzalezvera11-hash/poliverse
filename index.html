@@ -1,222 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Poliverse</title>
 
-<style>
+<link rel="stylesheet" href="style.css">
 
-:root{
---azul:#8CCBFF;
---azul-fuerte:#4D7DFF;
---lila:#D8C2FF;
---rosa:#FFD6E8;
---blanco:#FFFFFF;
---gris:#F5F7FA;
-}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
-}
-
-body{
-background:var(--gris);
-color:#222;
-}
-
-nav{
-background:white;
-padding:15px 30px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
-z-index:100;
-}
-
-.logo{
-font-size:1.5rem;
-font-weight:bold;
-color:var(--azul-fuerte);
-}
-
-.menu{
-display:flex;
-gap:20px;
-}
-
-.menu a{
-text-decoration:none;
-color:#333;
-font-weight:600;
-}
-
-.hero{
-background:linear-gradient(
-135deg,
-var(--azul),
-var(--lila)
-);
-padding:80px 20px;
-text-align:center;
-color:white;
-}
-
-.hero h1{
-font-size:3rem;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:1.2rem;
-max-width:700px;
-margin:auto;
-}
-
-.btn{
-display:inline-block;
-margin-top:25px;
-padding:14px 28px;
-background:white;
-color:var(--azul-fuerte);
-text-decoration:none;
-border-radius:25px;
-font-weight:bold;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:50px 20px;
-}
-
-.section-title{
-text-align:center;
-margin-bottom:40px;
-font-size:2rem;
-color:var(--azul-fuerte);
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:25px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-}
-
-.card h3{
-margin-bottom:10px;
-color:var(--azul-fuerte);
-}
-
-.search{
-background:white;
-padding:40px;
-border-radius:20px;
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-text-align:center;
-}
-
-.search input{
-width:100%;
-max-width:500px;
-padding:15px;
-border-radius:15px;
-border:1px solid #ccc;
-font-size:1rem;
-}
-
-footer{
-background:white;
-padding:30px;
-text-align:center;
-margin-top:40px;
-}
-
-@media(max-width:768px){
-
-.menu{
-display:none;
-}
-
-.hero h1{
-font-size:2rem;
-}
-
-}
-
-</style>
 </head>
 
 <body>
 
-<nav>
+<!-- Barra superior -->
 
-<div class="logo">🌎 Poliverse</div>
+<nav class="navbar">
+
+<div class="logo">
+🌎 Poliverse
+</div>
 
 <div class="menu">
-<a href="#">Inicio</a>
-<a href="#">Países</a>
-<a href="#">Academia</a>
-<a href="#">Noticias</a>
-<a href="#">Test</a>
+
+<a href="#inicio">Inicio</a>
+
+<a href="#paises">Países</a>
+
+<a href="#academia">Academia</a>
+
+<a href="#noticias">Noticias</a>
+
+<a href="#test">Test</a>
+
+</div>
+
+<div class="theme-switch">
+
+<button id="lightBtn">☀️</button>
+
+<button id="darkBtn">🌙</button>
+
+<button id="autoBtn">💻</button>
+
 </div>
 
 </nav>
 
-<section class="hero">
+<!-- Hero -->
 
-<h1>Explora la política mundial</h1>
+<section id="inicio" class="hero">
+
+<div class="hero-content">
+
+<h1>
+Explora la Política Mundial
+</h1>
 
 <p>
 Investiga países, gobiernos, ideologías,
-relaciones internacionales y actualidad política
+organismos internacionales y actualidad global
 desde una plataforma moderna y accesible.
 </p>
 
-<a href="#" class="btn">
-Comenzar
-</a>
+<button class="hero-btn">
+Comenzar Exploración
+</button>
+
+</div>
+
+<div class="hero-globe">
+🌍
+</div>
 
 </section>
 
-<div class="container">
+<!-- Buscador -->
 
-<h2 class="section-title">
+<section id="paises" class="section">
+
+<h2>
 🔍 Buscar Países
 </h2>
 
-<div class="search">
+<div class="search-box">
+
 <input
+id="countryInput"
 type="text"
-placeholder="Busca un país..."
+placeholder="Escribe un país..."
 >
-</div>
+
+<button onclick="buscarPais()">
+Buscar
+</button>
 
 </div>
 
-<div class="container">
+<div id="resultadoPais">
 
-<h2 class="section-title">
-🌍 Explorar
+<p class="placeholder">
+Busca un país para comenzar.
+</p>
+
+</div>
+
+</section>
+
+<!-- Estadísticas -->
+
+<section class="section">
+
+<h2>
+📊 Explorar
 </h2>
 
 <div class="cards">
@@ -224,35 +123,41 @@ placeholder="Busca un país..."
 <div class="card">
 <h3>🌎 Países</h3>
 <p>
-Consulta información política de países
-de todo el mundo.
+Consulta información actualizada de países de todo el mundo.
 </p>
 </div>
 
 <div class="card">
 <h3>🏛️ Gobiernos</h3>
 <p>
-Aprende sobre democracias,
-monarquías y otros sistemas.
+Aprende sobre democracias, monarquías y sistemas políticos.
 </p>
 </div>
 
 <div class="card">
-<h3>📊 Economía</h3>
+<h3>📈 Economía</h3>
 <p>
-Comprende indicadores económicos
-y desarrollo internacional.
+Comprende indicadores económicos y desarrollo internacional.
+</p>
+</div>
+
+<div class="card">
+<h3>🤝 Relaciones Internacionales</h3>
+<p>
+Descubre cómo interactúan los países entre sí.
 </p>
 </div>
 
 </div>
 
-</div>
+</section>
 
-<div class="container">
+<!-- Academia -->
 
-<h2 class="section-title">
-🎓 Academia
+<section id="academia" class="section">
+
+<h2>
+🎓 Academia Poliverse
 </h2>
 
 <div class="cards">
@@ -273,26 +178,72 @@ y desarrollo internacional.
 <h3>Organismos Internacionales</h3>
 </div>
 
+<div class="card">
+<h3>Feminismo</h3>
+</div>
+
+<div class="card">
+<h3>Ideologías Políticas</h3>
 </div>
 
 </div>
 
-<div class="container">
+</section>
 
-<h2 class="section-title">
+<!-- Noticias -->
+
+<section id="noticias" class="section">
+
+<h2>
+📰 Noticias Internacionales
+</h2>
+
+<div class="news-container">
+
+<div class="news-card">
+<h3>🌍 Próximamente</h3>
+
+<p>
+Esta sección mostrará noticias políticas actualizadas.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Test -->
+
+<section id="test" class="section">
+
+<h2>
 🧭 Test Político
 </h2>
 
 <div class="card">
 
 <p>
-Descubre qué corrientes políticas
-se acercan más a tus opiniones.
+Descubre qué corrientes políticas se acercan más a tus opiniones.
 </p>
 
-</div>
+<button class="hero-btn">
+Iniciar Test
+</button>
 
 </div>
+
+</section>
+
+<!-- Mascota -->
+
+<div class="mascot">
+
+✨ Poli
+
+</div>
+
+<!-- Footer -->
 
 <footer>
 
@@ -300,7 +251,14 @@ se acercan más a tus opiniones.
 Poliverse © 2026
 </p>
 
+<p>
+Explora • Aprende • Comprende
+</p>
+
 </footer>
 
+<script src="script.js"></script>
+
 </body>
+
 </html>
