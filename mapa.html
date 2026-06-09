@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Mapa Mundial | Poliverse</title>
 
 <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
 <nav class="navbar">
 
-<div class="logo">
-🌎 Poliverse
-</div>
+<div class="logo">🌎 Poliverse</div>
 
 <div class="menu">
 <a href="index.html">Inicio</a>
@@ -29,36 +23,27 @@
 
 <section class="section">
 
-<h2>
-🌍 Mapa Mundial Interactivo
-</h2>
+<h2>🌍 Mapa Mundial</h2>
 
-<p style="text-align:center;margin-bottom:30px;">
-Selecciona un país para explorar información.
+<p class="placeholder">
+Haz clic sobre un país para conocer más información.
 </p>
 
-<div class="map-container">
+<div id="mapa-container">
 
-<iframe
-src="https://www.google.com/maps/d/embed?mid=1lM7nL6sIY4x6z0nKxLw5x5f0J7I"
-width="100%"
-height="600">
-</iframe>
+<object
+id="worldMap"
+data="assets/world.svg"
+type="image/svg+xml">
+</object>
 
 </div>
 
+<div id="resultadoPais"></div>
+
 </section>
-
-<footer>
-
-<p>
-Poliverse © 2026
-</p>
-
-</footer>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
