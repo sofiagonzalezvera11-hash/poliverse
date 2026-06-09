@@ -534,3 +534,27 @@ max-width:500px;
 }
 
 }
+#mapa-container{
+width:100%;
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+#worldMap{
+width:100%;
+height:700px;
+border:none;
+background:var(--card);
+border-radius:25px;
+box-shadow:var(--shadow);
+}
+
+svg path{
+cursor:pointer;
+transition:.3s;
+}
+
+svg path:hover{
+opacity:.8;
+}
