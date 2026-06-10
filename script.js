@@ -209,3 +209,91 @@ if (countryInput) {
 }
 
 console.log("🌎 Poliverse 3.0 iniciado correctamente")
+function abrirAcademia(tema){
+
+const contenido =
+document.getElementById("academiaContenido");
+
+const temas = {
+
+ri: `
+<h2>🌍 Relaciones Internacionales</h2>
+<p>
+Estudia cómo interactúan los países,
+las organizaciones internacionales
+y otros actores globales.
+</p>
+<p>
+🌟 Dato curioso:
+La diplomacia moderna se fortaleció
+tras la Paz de Westfalia.
+</p>
+`,
+
+ddhh: `
+<h2>⚖️ Derechos Humanos</h2>
+<p>
+Son derechos fundamentales que
+corresponden a todas las personas.
+</p>
+<p>
+🌟 Dato curioso:
+La Declaración Universal de los Derechos Humanos
+fue aprobada en 1948.
+</p>
+`,
+
+feminismo: `
+<h2>👩 Feminismo</h2>
+<p>
+Movimiento que busca la igualdad
+de derechos y oportunidades.
+</p>
+<p>
+🌟 Dato curioso:
+Existen múltiples corrientes feministas.
+</p>
+`,
+
+onu: `
+<h2>🤝 ONU</h2>
+<p>
+La ONU promueve la cooperación
+internacional entre los países.
+</p>
+<p>
+🌟 Dato curioso:
+Tiene 193 Estados miembros.
+</p>
+`,
+
+democracia: `
+<h2>🏛️ Democracia</h2>
+<p>
+Sistema político donde la ciudadanía
+participa en la elección de gobernantes.
+</p>
+<p>
+🌟 Dato curioso:
+Existen varios modelos democráticos.
+</p>
+`,
+
+globalizacion: `
+<h2>🌐 Globalización</h2>
+<p>
+Proceso de creciente conexión
+entre sociedades y economías.
+</p>
+<p>
+🌟 Dato curioso:
+Internet aceleró enormemente este proceso.
+</p>
+`
+
+};
+
+contenido.innerHTML =
+temas[tema];
+
+}
