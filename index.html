@@ -16,7 +16,7 @@
 
 <body>
 
-<!-- Barra superior -->
+<!-- NAVBAR -->
 
 <nav class="navbar">
 
@@ -28,7 +28,7 @@
 
 <a href="#inicio">Inicio</a>
 
-<a href="mapa.html">Mapa</a>
+<a href="#paises">Países</a>
 
 <a href="#academia">Academia</a>
 
@@ -37,6 +37,7 @@
 <a href="#test">Test</a>
 
 </div>
+
 <div class="theme-switch">
 
 <button id="lightBtn">☀️</button>
@@ -49,7 +50,7 @@
 
 </nav>
 
-<!-- Hero -->
+<!-- HERO -->
 
 <section id="inicio" class="hero">
 
@@ -61,12 +62,16 @@ Explora la Política Mundial
 
 <p>
 Investiga países, gobiernos, ideologías,
-organismos internacionales y actualidad global
-desde una plataforma moderna y accesible.
+relaciones internacionales, organismos globales
+y actualidad internacional desde una plataforma
+juvenil y moderna.
 </p>
 
-<button class="hero-btn">
+<button class="hero-btn"
+onclick="document.getElementById('paises').scrollIntoView()">
+
 Comenzar Exploración
+
 </button>
 
 </div>
@@ -77,7 +82,7 @@ Comenzar Exploración
 
 </section>
 
-<!-- Buscador -->
+<!-- BUSCADOR -->
 
 <section id="paises" class="section">
 
@@ -109,49 +114,65 @@ Busca un país para comenzar.
 
 </section>
 
-<!-- Estadísticas -->
+<!-- EXPLORAR -->
 
 <section class="section">
 
 <h2>
-📊 Explorar
+🌎 Explorar
 </h2>
 
 <div class="cards">
 
 <div class="card">
-<h3>🌎 Países</h3>
+
+<h3>🌍 Países</h3>
+
 <p>
-Consulta información actualizada de países de todo el mundo.
+Consulta información actualizada de países
+de todo el mundo.
 </p>
+
 </div>
 
 <div class="card">
+
 <h3>🏛️ Gobiernos</h3>
+
 <p>
-Aprende sobre democracias, monarquías y sistemas políticos.
+Aprende sobre democracias, monarquías
+y sistemas políticos.
 </p>
+
 </div>
 
 <div class="card">
+
 <h3>📈 Economía</h3>
+
 <p>
-Comprende indicadores económicos y desarrollo internacional.
+Comprende indicadores económicos
+y desarrollo internacional.
 </p>
+
 </div>
 
 <div class="card">
+
 <h3>🤝 Relaciones Internacionales</h3>
+
 <p>
-Descubre cómo interactúan los países entre sí.
+Descubre cómo interactúan los países
+entre sí.
 </p>
+
 </div>
 
 </div>
 
 </section>
 
-<!-- Academia -->
+<!-- ACADEMIA -->
 
 <section id="academia" class="section">
 
@@ -161,35 +182,49 @@ Descubre cómo interactúan los países entre sí.
 
 <div class="cards">
 
-<div class="card">
-<h3>Relaciones Internacionales</h3>
+<div class="card" onclick="abrirAcademia('ri')">
+<h3>🌍 Relaciones Internacionales</h3>
 </div>
 
-<div class="card">
-<h3>Derechos Humanos</h3>
+<div class="card" onclick="abrirAcademia('ddhh')">
+<h3>⚖️ Derechos Humanos</h3>
 </div>
 
-<div class="card">
-<h3>Geopolítica</h3>
+<div class="card" onclick="abrirAcademia('feminismo')">
+<h3>👩 Feminismo</h3>
 </div>
 
-<div class="card">
-<h3>Organismos Internacionales</h3>
+<div class="card" onclick="abrirAcademia('onu')">
+<h3>🤝 ONU</h3>
 </div>
 
-<div class="card">
-<h3>Feminismo</h3>
+<div class="card" onclick="abrirAcademia('democracia')">
+<h3>🏛️ Democracia</h3>
 </div>
 
-<div class="card">
-<h3>Ideologías Políticas</h3>
+<div class="card" onclick="abrirAcademia('globalizacion')">
+<h3>🌐 Globalización</h3>
 </div>
+
+</div>
+
+<br><br>
+
+<div id="academiaContenido" class="country-card">
+
+<h2>
+🎓 Academia Poliverse
+</h2>
+
+<p>
+Selecciona un tema para comenzar.
+</p>
 
 </div>
 
 </section>
 
-<!-- Noticias -->
+<!-- NOTICIAS -->
 
 <section id="noticias" class="section">
 
@@ -197,13 +232,37 @@ Descubre cómo interactúan los países entre sí.
 📰 Noticias Internacionales
 </h2>
 
-<div class="news-container">
+<div class="cards">
 
-<div class="news-card">
-<h3>🌍 Próximamente</h3>
+<div class="card">
+
+<h3>🌍 Política Global</h3>
 
 <p>
-Esta sección mostrará noticias políticas actualizadas.
+Próximamente integraremos noticias
+internacionales en tiempo real.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌐 Geopolítica</h3>
+
+<p>
+Análisis de conflictos, alianzas
+y relaciones internacionales.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🏛️ Organismos Internacionales</h3>
+
+<p>
+Información sobre ONU, OTAN,
+UE y más.
 </p>
 
 </div>
@@ -212,7 +271,7 @@ Esta sección mostrará noticias políticas actualizadas.
 
 </section>
 
-<!-- Test -->
+<!-- TEST -->
 
 <section id="test" class="section">
 
@@ -220,29 +279,97 @@ Esta sección mostrará noticias políticas actualizadas.
 🧭 Test Político
 </h2>
 
-<div class="card">
+<div class="country-card">
+
+<h3>
+Descubre tu orientación política
+</h3>
+
+<br>
 
 <p>
-Descubre qué corrientes políticas se acercan más a tus opiniones.
+En próximas versiones podrás responder
+preguntas y descubrir qué corrientes
+políticas se acercan más a tus ideas.
 </p>
 
+<br>
+
 <button class="hero-btn">
+
 Iniciar Test
+
 </button>
 
 </div>
 
 </section>
 
-<!-- Mascota -->
+<!-- DATOS GLOBALES -->
 
-<div class="mascot">
+<section class="section">
 
-✨ Poli
+<h2>
+🌟 Datos Globales
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🌎 195 Países</h3>
+
+<p>
+Explora información de prácticamente
+todos los países reconocidos.
+</p>
 
 </div>
 
-<!-- Footer -->
+<div class="card">
+
+<h3>🗳️ Política</h3>
+
+<p>
+Comprende ideologías,
+gobiernos y sistemas políticos.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🤝 Diplomacia</h3>
+
+<p>
+Aprende sobre cooperación
+y relaciones internacionales.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🎓 Educación</h3>
+
+<p>
+Contenido pensado para estudiantes
+y curiosos de todas las edades.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MASCOTA -->
+
+<div class="mascot">
+✨ Poli
+</div>
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -260,4 +387,4 @@ Explora • Aprende • Comprende
 
 </body>
 
-</html>
+</html
