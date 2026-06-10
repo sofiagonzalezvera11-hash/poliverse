@@ -175,4 +175,4 @@ document
         buscarPais();
     }
 });
-console.log("🌎 Poliverse 3.0 iniciad
+console.log("🌎 Poliverse 3.0 iniciado");
